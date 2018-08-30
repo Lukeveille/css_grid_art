@@ -7,7 +7,6 @@ body {
     margin: 20px auto;
     height: 300px;
     display: grid;
-    grid-gap: 4px;
     grid-template-rows: 100px 100px 1fr 1fr;
     grid-template-columns: 80px 1fr 30px;
 }
@@ -18,23 +17,28 @@ body {
 
 .one {
     grid-row: 1;
-    grid-column: 1;
+    grid-column-start: 1;
 }
 
 .two {
-}
-
-.three {
+  background-color: #F00;
+  grid-row: 1 / span 2;
+  grid-column: 2 / span 2;
 }
 
 .four {
+  background-color: #06F;
+  grid-row: 3 / span 2;
 }
 
 .five {
-}
-
-.six {
+  grid-row: 3 / span 2;
 }
 
 .seven {
+  background-color: #FF0;
+}
+
+.container div {
+  border: 4px solid black;
 }
